@@ -14,8 +14,7 @@ window.onload = function() {
     {input:{r: 0.5, g: 0.5, b: 1 }, output: {oscuro: 1}},
     {input:{r: 1, g: 0.5, b: 0.5 }, output: {oscuro: 1}},
     {input:{r: 0.75, g: 0.75, b: 0.75 }, output: {oscuro: 1}}
-
-  ])
+  ]);
 
 
   Entrada.addEventListener("change", (e) =>{
@@ -25,6 +24,10 @@ window.onload = function() {
     console.log("Rojo "+ColorRGB.r);
     console.log("Azul "+ColorRGB.b);
     console.log("Verde "+ColorRGB.g);
+
+    var Resultado = brain.likely(ColorRGB, Neurona);
+    console.log("Resultado "+Resultado);
+    Spoiler.style.color = Resultado === "claro" ? "white" : "black"
   })
 
 
