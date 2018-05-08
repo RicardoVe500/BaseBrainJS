@@ -16,6 +16,7 @@ window.onload = function() {
     {input:{r: 0.75, g: 0.75, b: 0.75 }, output: {oscuro: 1}}
   ]);
 
+  
 
   Entrada.addEventListener("change", (e) =>{
     Spoiler.style.background = e.target.value;
