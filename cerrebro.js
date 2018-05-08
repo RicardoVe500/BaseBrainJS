@@ -3,7 +3,19 @@ window.onload = function() {
   const Entrada = document.querySelector("input")
   const Spoiler = document.querySelector("#spoiler")
 
-const Neurona = new braind.NeuronaNetwork();
+  const Neurona = new brain.NeuralNetwork();
+
+  Neurona.train([
+    {input:{r: 0, g: 0, b: 0 }, output: {claro: 1}},
+    {input:{r: 1, g: 1, b: 1 }, output: {oscuro: 1}},
+    {input:{r: 0, g: 0.25, b: 0.25 }, output: {oscuro: 1}},
+    {input:{r: 0.5, g: 0.5, b: 0 }, output: {claro: 1}},
+    {input:{r: 0.5, g: 0, b: 0.25 }, output: {claro: 1}},
+    {input:{r: 0.5, g: 0.5, b: 1 }, output: {oscuro: 1}},
+    {input:{r: 1, g: 0.5, b: 0.5 }, output: {oscuro: 1}},
+    {input:{r: 0.75, g: 0.75, b: 0.75 }, output: {oscuro: 1}}
+
+  ])
 
 
   Entrada.addEventListener("change", (e) =>{
